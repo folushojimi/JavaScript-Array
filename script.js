@@ -65,6 +65,29 @@ const noOneLikeJon = names.slice(1)
 console.log(noOneLikeJon)
 
  
+//Concat - merge 2 or more array together 
+const arr1 = [1,2,3,4]
+const arr2 = [5,6,7,8]
+const collab = arr1.concat(arr2)
+console.log(collab)
+
+// join - gives an item to join all other items together
+const joinsample = [1,2,3,4,5,6]
+const joinedResult = joinsample.join('-')
+console.log(joinedResult)
+
+
+//Array forEach
+const namees = ['jon', 'john', 'jenny' ]
+
+for(let i = 0; i < namee.lenght; i++){
+    console.log(i, names[i]);
+}
+
+
+
+
+
 
 // //From The Book
 // const myArray = new Array (
