@@ -27,6 +27,8 @@ const bestBooks = [
 
 ]
 console.log(bestBooks)
+//console.log(alltype[2](10,2)) -> function in array
+//console.log(alltype[1].product) -> object in array
 
 
 const names = ['Jon', 'Bob', 'David', 'Mark'];
@@ -64,6 +66,12 @@ names.splice(2,0, 'jenny', 'johnny');
 const noOneLikeJon = names.slice(1)
 console.log(noOneLikeJon)
 
+// Copying an Entire Array with slice
+const listOfProduct = ['milk', 'sugar', 'milo', 'orange', 'banana', 'fanta', 'coke']
+console.log(listOfProduct.slice())
+
+// Chaining with Other Array Methods with slic
+
  
 //Concat - merge 2 or more array together 
 const arr1 = [1,2,3,4]
@@ -77,12 +85,32 @@ const joinedResult = joinsample.join('-')
 console.log(joinedResult)
 
 
-//Array forEach
+
+//Array forEach (Basics)
+
 const namees = ['jon', 'john', 'jenny' ]
 
-for(let i = 0; i < namee.lenght; i++){
-    console.log(i, names[i]);
+//Using forloop to loop through an array and it indexed(hardway)
+for(let i = 0; i < namees.lenght; i++){
+    console.log(i, namees[i]);
 }
+
+//QUICK CODE EXPLANATION
+//the "i" autimatically carries the power of namees
+//so we can print the i directly knowingly its attached to length
+//but to remove the length we need to print it like this console.log(i, namees[i])
+
+//Using a forEach (Easy alternatives)
+// namees.forEach((name, i) => {
+// console.log(name, i)
+// })
+
+//Arrow function using arraymethod(commonly used)
+const logTheName = (names, i)=> console.log(i, namees[i]);
+names.forEach(logTheName)
+
+//Best practice
+names.forEach((name,i)=> console.log(name, i))
 
 
 
