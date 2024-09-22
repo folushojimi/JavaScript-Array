@@ -105,17 +105,29 @@ for(let i = 0; i < namees.lenght; i++){
 // console.log(name, i)
 // })
 
-//Arrow function using arraymethod(commonly used)
+//Arrow function using array method(commonly used)
 const logTheName = (names, i)=> console.log(i, namees[i]);
 names.forEach(logTheName)
 
 //Best practice
 names.forEach((name,i)=> console.log(name, i))
 
+//Array map()
+//1
+const numbersOfStudent = [1, 2, 3, 4, 5, 6]
 
+const multiplStudent = numbersOfStudent.map(function(mS){
+    return mS*mS
+} )
 
+console.log(multiplStudent)
 
+//2
+const studentName = ['jude', 'paul', 'peter']
 
+const capStudent = studentName.map((cS)=> cS.toUpperCase)
+
+console.log(capStudent)
 
 // //From The Book
 // const myArray = new Array (
