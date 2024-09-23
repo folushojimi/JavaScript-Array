@@ -70,7 +70,7 @@ console.log(noOneLikeJon)
 const listOfProduct = ['milk', 'sugar', 'milo', 'orange', 'banana', 'fanta', 'coke']
 console.log(listOfProduct.slice())
 
-// Chaining with Other Array Methods with slic
+// Chaining with Other Array Methods with slice
 
  
 //Concat - merge 2 or more array together 
@@ -128,6 +128,12 @@ const studentName = ['jude', 'paul', 'peter']
 const capStudent = studentName.map((cS)=> cS.toUpperCase)
 
 console.log(capStudent)
+
+
+
+//Diferent between forEach() and map()
+
+
 
 // //From The Book
 // const myArray = new Array (
