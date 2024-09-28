@@ -180,6 +180,8 @@ const studenttWithA = sTudent.filter((aStudent)=> aStudent.charAt(0) === 'a')
 console.log(studenttWithA)
 
 
+// ARRAY SORT()
+
 //sort() - its a method in javascript used to sort things, 
 //in order arrangement, always put sorted item in new array
 
@@ -196,6 +198,44 @@ const alphabet =['z','a','o','b','c']
 const alphabetSort = alphabet.sort()
 
 console.log(alphabetSort)
+
+//sorting array in decending order 
+const yearsOfBirth = [1920, 1988, 1930, 2023, 2024]
+yearsOfBirth.sort((a,b)=> b - a)
+
+// custom ascending
+yearsOfBirth.sort((a,b)=> b - a)
+
+
+// ARRAY REVERSE - Used to reverse the order of elements in an array 
+//modifies the original array
+
+const noOfPupils = [9, 20, 17, 19, 1];
+noOfPupils.reverse();
+console.log(noOfPupils);
+
+//ARRAY REDUCE - itterate through array and return a signle value eithther 
+//addition, multiply, or substracting.
+//can also be used to concatenate strings in an array. 
+// reduce() - (does not modified the original array)
+noOfPupils.reduce((a, b)=> a + b)
+noOfPupils.reduce((a, b)=> a - b)
+noOfPupils.reduce((a, b)=> a * b)
+
+//can also be used to concatenate strings in an array. 
+const proteinFood = ['egg', 'beans', 'milk', 'soy bean']
+
+proteinFood.reduce((a, b)=> a + ' , ' + b )
+
+//ARRAY EVERY
+
+const bettingClient = [20, 30, 40, 80, 25]
+
+const validBettingClient = bettingClient.every((validClient)=> validClient > 18 )
+
+console.log(validBettingClient)
+
+
 //Diferent between forEach() and map()
 
 
