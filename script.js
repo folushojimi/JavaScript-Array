@@ -86,7 +86,10 @@ console.log(joinedResult)
 
 
 
-//Array forEach (Basics)
+// HIGEHR ORDER FUNCTION IN JAVASCRIPT
+
+
+//ARRAY forEach (Basics)
 
 const namees = ['jon', 'john', 'jenny' ]
 
@@ -112,7 +115,21 @@ names.forEach(logTheName)
 //Best practice
 names.forEach((name,i)=> console.log(name, i))
 
-//Array map()
+
+//Hosting our forEach array in a new variabele
+// Title-casingmeanscapitalizingthe
+//  firstletterofeachwordinastring
+
+const titleCaseName = []
+
+names.forEach((name)=>{
+    const tiledOP = name[0].toUpperCase + name.slice(1)
+titleCaseName.push(tiledOP)
+})
+
+
+
+//ARRAY map()
 //1
 const numbersOfStudent = [1, 2, 3, 4, 5, 6]
 
@@ -130,7 +147,55 @@ const capStudent = studentName.map((cS)=> cS.toUpperCase)
 console.log(capStudent)
 
 
+//ARRAY FILTER - used to filter out elements that meets certain condition 
+const sTudent = [
+    'John',
+    'Jane',
+    'Johnson',
+    'kola',
+    'bode',
+    'bose',
+    'amaka',
+    'angel',
+    'anike'
+]
 
+const studentWithJ = sTudent.filter((JStudent)=>
+JStudent.startsWith('J'))
+
+console.log(studentWithJ)
+
+
+//To filter for student that did not start with j - using negation (!)
+
+const studentwithNoJ = sTudent.filter((NoStudent)=> !NoStudent.startsWith() )
+
+console.log(studentwithNoJ)
+
+
+//alternative to startWith() - method is charAt()
+
+const studenttWithA = sTudent.filter((aStudent)=> aStudent.charAt(0) === 'a')
+
+console.log(studenttWithA)
+
+
+//sort() - its a method in javascript used to sort things, 
+//in order arrangement, always put sorted item in new array
+
+const arrangement = [0,7,2,8,5,1,3,4,6]
+
+const letscheck = arrangement.sort()
+
+console.log(letscheck)
+
+
+//sorting array of strings
+const alphabet =['z','a','o','b','c']
+
+const alphabetSort = alphabet.sort()
+
+console.log(alphabetSort)
 //Diferent between forEach() and map()
 
 
