@@ -268,63 +268,6 @@
 // console.log(checkIndex)
 
 
-//DESTRUCTURING ARRAY
-
-const confAttendee = [
-    'Emmanuel',
-    'Leke',
-    'Paul',
-    'Janet'
-]
-
-const [
-    firstAttendee,
-    secondAttendee,
-    thirdAttendee,
-    fourthAttendee,
-] = confAttendee
-
-
-console.log(firstAttendee)
-console.log(secondAttendee)
-
-
-//Destructuring only 
-//the elements we need 
-
-{
-    const [firstAttendee,  ,thirdAttendee] = confAttendee
-    console.log(firstAttendee)
-    console.log(secondAttendee)
-
-}
-
-
-// LIST OF DESTRUCTURING CHALLENGE QUESTIONS
-
-//1. Splitting and Assigning Top Scores
-//You have an array of top scores 
-//from a gaming leaderboard:[230, 180, 170, 150, 140]. Use array destructuring 
-//to assign the first two scores to firstPlace and secondPlace variables, and 
-//store the rest of the scores in a remainingScores array.
-
-// 2. Extracting Key Flight Information
-// An airline API returns flight details as an array: ['Flight 101', 'New York', 'Los Angeles', 'On Time']. 
-// Use array destructuring to extract and assign the flight number, departure city, and arrival city to 
-// individual variables, while ignoring the flight status.
-
-// 3. Parsing Shopping Cart Items
-// A shopping cart contains items with their name, quantity, and price stored in an array: ['Laptop', 1, 1200].
-//  Use array destructuring to extract the name of the item and its price into separate variables, while ignoring the quantity.
-
-// 4. Returning Multiple Values from a Survey Response
-// A survey result returns an array with responses for [satisfactionLevel, improvementSuggestions, contactMethod], where contactMethod
-//  is optional. Use array destructuring to assign the first two values to variables, and assign 'Not provided' as the default value 
-//  for contactMethod if it's missing.
-
-// 5. Handling Date Information
-// A function returns a date as an array [year, month, day], but sometimes the day is omitted. Use array destructuring to extract the year and
-//  month, and assign a default value of 1 to the day if it’s not provided.
 
 
 
@@ -812,3 +755,85 @@ console.log(findInd);
 // Use join to generate a string of all product names in the cart, separated by commas.
 
 
+
+
+
+//DESTRUCTURING ARRAY
+
+const confAttendee = [
+    'Emmanuel',
+    'Leke',
+    'Paul',
+    'Janet'
+]
+
+const [
+    firstAttendee,
+    secondAttendee,
+    thirdAttendee,
+    fourthAttendee,
+] = confAttendee
+
+
+console.log(firstAttendee)
+console.log(secondAttendee)
+
+
+//Destructuring only 
+//the elements we need 
+
+{
+    const [firstAttendee,  ,thirdAttendee] = confAttendee
+    console.log(firstAttendee)
+    console.log(secondAttendee)
+
+}
+
+
+// LIST OF DESTRUCTURING BASIC CHALLENGE QUESTIONS
+// 1. Extract First Two Elements
+// Given an array [100, 200, 300], use array destructuring to extract the first two 
+// elements into separate variables first and second.
+
+
+// 2. Skip Elements While Destructuring
+// Given an array [10, 20, 30, 40], use array destructuring to skip the first element and 
+// extract the second and fourth elements into second and fourth.
+
+// 3. Destructure with Default Values
+// Given an array [5], use array destructuring to extract the first value into a variable x and 
+// assign a default value of 10 to the second variable y if it doesn't exist.
+
+// 4. Destructure Nested Arrays
+// Given a nested array [1, [2, 3], 4], use array destructuring to extract the first element, the 
+// second element (which is an array), and the third element into separate variables a, b, and c.
+
+// 5. Swap Two Variables
+// Given two variables a = 50 and b = 100, use array destructuring to swap the values of a and b.
+
+
+// LIST OF DESTRUCTURING ADVANCE CHALLENGE QUESTIONS
+
+//1. Splitting and Assigning Top Scores
+//You have an array of top scores 
+//from a gaming leaderboard:[230, 180, 170, 150, 140]. Use array destructuring 
+//to assign the first two scores to firstPlace and secondPlace variables, and 
+//store the rest of the scores in a remainingScores array.
+
+// 2. Extracting Key Flight Information
+// An airline API returns flight details as an array: ['Flight 101', 'New York', 'Los Angeles', 'On Time']. 
+// Use array destructuring to extract and assign the flight number, departure city, and arrival city to 
+// individual variables, while ignoring the flight status.
+
+// 3. Parsing Shopping Cart Items
+// A shopping cart contains items with their name, quantity, and price stored in an array: ['Laptop', 1, 1200].
+//  Use array destructuring to extract the name of the item and its price into separate variables, while ignoring the quantity.
+
+// 4. Returning Multiple Values from a Survey Response
+// A survey result returns an array with responses for [satisfactionLevel, improvementSuggestions, contactMethod], where contactMethod
+//  is optional. Use array destructuring to assign the first two values to variables, and assign 'Not provided' as the default value 
+//  for contactMethod if it's missing.
+
+// 5. Handling Date Information
+// A function returns a date as an array [year, month, day], but sometimes the day is omitted. Use array destructuring to extract the year and
+//  month, and assign a default value of 1 to the day if it’s not provided.
