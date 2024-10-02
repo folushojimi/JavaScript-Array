@@ -30,6 +30,8 @@
 // //console.log(alltype[2](10,2)) -> function in array
 // //console.log(alltype[1].product) -> object in array
 
+//ARRAY METHODS
+
 
 // const names = ['Jon', 'Bob', 'David', 'Mark'];
 
@@ -266,10 +268,64 @@
 // console.log(checkIndex)
 
 
+//DESTRUCTURING ARRAY
+
+const confAttendee = [
+    'Emmanuel',
+    'Leke',
+    'Paul',
+    'Janet'
+]
+
+const [
+    firstAttendee,
+    secondAttendee,
+    thirdAttendee,
+    fourthAttendee,
+] = confAttendee
 
 
+console.log(firstAttendee)
+console.log(secondAttendee)
 
-//Diferent between forEach() and map()
+
+//Destructuring only 
+//the elements we need 
+
+{
+    const [firstAttendee,  ,thirdAttendee] = confAttendee
+    console.log(firstAttendee)
+    console.log(secondAttendee)
+
+}
+
+
+// LIST OF DESTRUCTURING CHALLENGE QUESTIONS
+
+//1. Splitting and Assigning Top Scores
+//You have an array of top scores 
+//from a gaming leaderboard:[230, 180, 170, 150, 140]. Use array destructuring 
+//to assign the first two scores to firstPlace and secondPlace variables, and 
+//store the rest of the scores in a remainingScores array.
+
+// 2. Extracting Key Flight Information
+// An airline API returns flight details as an array: ['Flight 101', 'New York', 'Los Angeles', 'On Time']. 
+// Use array destructuring to extract and assign the flight number, departure city, and arrival city to 
+// individual variables, while ignoring the flight status.
+
+// 3. Parsing Shopping Cart Items
+// A shopping cart contains items with their name, quantity, and price stored in an array: ['Laptop', 1, 1200].
+//  Use array destructuring to extract the name of the item and its price into separate variables, while ignoring the quantity.
+
+// 4. Returning Multiple Values from a Survey Response
+// A survey result returns an array with responses for [satisfactionLevel, improvementSuggestions, contactMethod], where contactMethod
+//  is optional. Use array destructuring to assign the first two values to variables, and assign 'Not provided' as the default value 
+//  for contactMethod if it's missing.
+
+// 5. Handling Date Information
+// A function returns a date as an array [year, month, day], but sometimes the day is omitted. Use array destructuring to extract the year and
+//  month, and assign a default value of 1 to the day if it’s not provided.
+
 
 
 
@@ -353,7 +409,7 @@
 // Given an array of numbers, use forEach to print each number multiplied by 2.
 const numBers = [10, 20, 30, 40, 50, 60]
 
-numBers.forEach((number, i)=> console.log(number * 2))
+numBers.forEach((number)=> console.log(number * 2))
 
 // Use forEach to iterate over an array of names and print a welcome message for each name.
 
@@ -439,53 +495,210 @@ const arrProducts = [
 
 ]
 
-const productName = arrProducts.map((namee)=>{namee.[1].name} )
+
+let pop = []
+
+// arrProducts.map((namee)=> namee.pop.slice(0,3) )
+    
+
+// console.log(productName)
+
+
+
 
 // 3. filter
 // Given an array of numbers, use filter to return a new array containing only the even numbers.
+const numfilter = [5, 10, 20, 16, 17, 30, 6]
+
+// const filteredEven = numfilter.filter((even)=> 
+// //till internet)
+
 // Create an array of objects representing people, and use filter to find all people older than 18.
+
+const people = 
+[
+    {
+        name:'mike',
+        age:'17',
+         
+       },
+       
+       {
+        name:'john',
+        age:'50'
+    
+       },
+       
+       {
+        name:'Emmanuel',
+       age:'25'
+       },
+]
+
+
+const greater = people.filter((plus)=>  plus.age > 18)
+console.log(greater)
+
+
 // Use filter to return all words in an array that contain more than 5 characters.
+
+const checkList = ['kamaru', 'kule', 'gbenga', 'johs', 'joseph']
+
+const more = checkList.filter((check)=> check.length > 5)
+
+console.log(more)
 
 
 // 4. find
 // Given an array of numbers, use find to return the first number greater than 10.
+
+const numbG = [3, 4, 16, 17, 20]
+
+const greaterThanfive = numbG.find((numb)=> numb > 5)
+
+console.log(greaterThanfive)
+
 // Use find to locate the first person in an array of objects who lives in a specific city.
+
+const locatiion = 
+
+[
+{
+name:'john',
+city:'newyork'
+},
+
+{
+name:'jenny',
+city:'spain'
+},
+
+{
+name:'jessica',
+city:'newyork'
+},
+
+{
+name:'jerry',
+city:'spain'
+}
+]
+
+const empty = []
+
+const findCity = locatiion.find((cit)=> {
+     if( cit.city === 'newyork'){
+        return cit.name
+    }
+})
+
+
+console.log(findCity)
+
+// console.log(locatiion)
+
 // Given an array of strings, use find to return the first string that starts with the letter 'A'.
+
+const availableJobs = ['array', 'strings', 'operators']
+
+const findA = availableJobs.find((jobs)=> jobs.startsWith('a') )
+
+console.log(findA)
 
 
 // 5. sort
 // Given an array of numbers, use sort to sort them in ascending order.
+
+const mixedNumbers = [20,10,15,7,23,8]
+const arrangee = mixedNumbers.sort((a,b)=> a - b)
+
+console.log(arrangee)
+
 // Use sort to arrange an array of names alphabetically.
+const arrangedName = ['bode', 'anike', 'carlton', 'emma', ]
+const sorttedNames = arrangedName.sort()
+console.log(sorttedNames)
+
 // Given an array of product prices, use sort to arrange the products from highest to lowest price.
+
+const arrProductPtices = [500, 100, 900, 10, 0.3]
+
+const productee = arrProductPtices.sort()
+console.log(productee)
 
 
 // 6. reduce
 // Given an array of numbers, use reduce to sum all the numbers.
+const allyNUmb = [10,100, 75, 20, 17];
+const sumally = allyNUmb.reduce((a,b)=> a + b);
+console.log(sumally);
+
 // Use reduce to count the occurrences of a specific word in an array of strings.
+//UNSOLVED
+// const occure = ['gemini', 'weather', 'acapela', 'emmanuela'];
+// const findWord = occure.reduce((a)=> a.includes('e'));
+// console.log(findWord);
+
 // Given an array of products with prices, use reduce to calculate the total price of all products.
+const allproducts = [200, 100, 800, 4000];
+const calcall = allproducts.reduce((a,b )=> a + b );
+console.log(calcall);
 
 
 // 7. reverse
 // Create an array of numbers and use reverse to reverse the order of the numbers.
+
+const rebase = [1,2,3,4,5,6,7,8,9];
+const reverseOP = rebase.reverse();
+console.log(reverseOP);
+
 // Given a string, split it into an array of characters, reverse the array, and join it back to form the reversed string.
+// UNSOLVED
+// const arrChar = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+// const reverseOp = arrChar.split("").reverse().join("");
+// console.log(reverseOp)
+
+
 // Use reverse to reverse the order of an array of names.
+
+const allarr = ['normal', ()=>{}, {}];
+const revAll = allarr.reverse();
+console.log(revAll)
 
 
 // 8. every
 // Given an array of numbers, use every to check if all numbers are greater than 0.
+const everyNumb = [10, 20, 30, 40, 50];
+const everyResult = everyNumb.every((numbers)=> numbers > 0 )
+console.log(everyResult)
+
+
 // Create an array of strings, and use every to check if all strings contain more than 3 characters.
+const everyString = ['one', 'two', 'act'];
+const checkThreeStrings = everyString.every((strings)=> strings.length === 3);
+console.log(checkThreeStrings)
+
 // Use every to determine if all elements in an array of booleans are true.
+// UNSOLVED - STRANGE
+const arrBol = [10 === 10, 20 > 10, 1 < 5]
+const checkBol = arrBol.every((bool)=>  bool === true);
+console.log(checkBol)
 
 
-// 9. some
+
+// 9. some - LEARN 
 // Given an array of numbers, use some to check if any number is greater than 100.
+ const smNumb = [100, 50, 60, 200];
+ const checkSum = smNumb.some((sm)=> sm > 100 );
+console.log(checkSum)
+
 // Use some to check if an array of strings contains any empty strings.
 // Given an array of ages, use some to check if any person is older than 65.
 
 
 
 
-// 10. includes
+// 10. includes - LEARN 
 // Given an array of numbers, use includes to check if the number 5 is present.
 // Use includes to check if a specific word exists in an array of words.
 // Create an array of names, and use includes to check if the name 'John' is in the list.
@@ -494,6 +707,108 @@ const productName = arrProducts.map((namee)=>{namee.[1].name} )
 
 // 11. findIndex
 // Given an array of numbers, use findIndex to find the index of the first number greater than 50.
+
+const indNumb = [10,40, 80, 80, 50];
+const checkInd = indNumb.findIndex((ind)=> ind > 50);
+console.log(checkInd)
+
 // Use findIndex to locate the index of a specific product by name in an array of product objects.
+
+const indOfProduct = 
+[
+{name:'pepsi'},
+{name:'dell'},
+{name:'panasonic'},
+{name:'samsung'}
+];
+const prodByName = indOfProduct.findIndex((spec)=> spec );
+console.log(prodByName)
+
 // Given an array of strings, use findIndex to find the index of the first string that contains more than 10 characters.
+
+const indOfString = ['string', 'computer', 'mathmatics'];
+const findInd = indOfString.findIndex((ids)=> ids.length > 9);
+console.log(findInd);
+
+
+
+// REAL LIFE PROBLEM SOLVING
+// FINAL WORK + PROJECT
+// Here are 10 practice questions combining array methods and higher-order functions that reflect real-life problem-solving scenarios:
+// 1. Inventory Management (push, pop, map, filter, find)
+// You are managing a store inventory. Given an array of products, perform the following tasks:
+// Add a new product to the end of the list using push.
+// Remove the last product when it's out of stock using pop.
+// Use map to increase the price of all products by 10%.
+// Use filter to create a list of products that are in stock (inStock: true).
+// Use find to locate the first product that costs more than $500.
+
+
+// 2. Customer Data Analysis (sort, reduce, filter)
+// You have an array of customer orders with total amounts. Perform these operations:
+// Use sort to arrange the orders in descending order based on the total amount.
+// Use reduce to calculate the total revenue generated by all orders combined.
+// Use filter to get a list of orders that are above $1000.
+
+// 3. Event Planning (unshift, shift, forEach, reverse, findIndex)
+// For an event guest list, perform the following:
+// Use unshift to add a guest to the beginning of the guest list.
+// Use shift to remove the first guest after they check in.
+// Use forEach to print a welcome message for each guest on the list.
+// Use reverse to reverse the order of the guest list.
+// Use findIndex to find the position of a specific guest by their name.
+
+// 4. Social Media Posts (concat, map, filter, some, every)
+// You are working with social media posts data. Perform these tasks:
+// Use concat to combine two arrays of posts from different platforms.
+// Use map to generate a list of post titles.
+// Use filter to find posts that contain more than 100 likes.
+// Use some to check if there is any post with over 1000 likes.
+// Use every to check if all posts have a date property.
+
+// 5. E-commerce Cart Management (includes, reduce, filter, slice)
+// In an e-commerce website, you're managing a user's cart. Complete the following:
+// Use includes to check if a specific product is already in the cart.
+// Use reduce to calculate the total cost of all items in the cart.
+// Use filter to find items that are eligible for free shipping (price > $50).
+// Use slice to remove the first two items from the cart, as a user decided not to purchase them.
+
+// 6. Task Scheduling (unshift, sort, find, findIndex)
+// You are working with a task management system. Perform these operations:
+// Use unshift to add a new task at the top of the task list.
+// Use sort to prioritize tasks based on deadlines (earliest deadline first).
+// Use find to locate the first task that has a priority level of "high."
+// Use findIndex to find the position of a specific task by its title.
+
+// 7. Library Book Management (concat, filter, map, findIndex)
+// You are managing a digital library system. Complete these tasks:
+// Use concat to merge two arrays of books from different categories (e.g., Fiction and Non-Fiction).
+// Use filter to create a list of all books published after the year 2000.
+// Use map to create a new array that contains only the titles of the books.
+// Use findIndex to locate the index of a specific book by its ISBN.
+
+// 8. Movie Recommendations (sort, reduce, filter, includes, some)
+// You are building a movie recommendation system. Perform the following:
+// Use sort to arrange movies by their rating, from highest to lowest.
+// Use reduce to calculate the average rating of all movies.
+// Use filter to find all movies from a specific genre, such as "Action."
+// Use includes to check if a particular movie is in the user’s favorites list.
+// Use some to check if there’s at least one movie that has a rating higher than 9.
+
+// 9. Budget Planning (reduce, map, filter, slice)
+// You are working on a monthly budget tool. Perform these tasks:
+// Use reduce to calculate the total expenses from an array of spending categories.
+// Use map to increase the budget of each category by 10% for next month.
+// Use filter to list categories where the spending exceeded the initial budget.
+// Use slice to return only the first 3 categories from the array, which represent top-priority expenses.
+
+
+// 10. Online Shopping (push, sort, reduce, some, filter, join)
+// You are developing features for an online shopping platform. Complete these tasks:
+// Use push to add a new product to a shopping cart.
+// Use sort to arrange the cart items by price in ascending order.
+// Use reduce to calculate the total price of the cart items.
+// Use some to check if any item in the cart costs more than $500.
+// Use join to generate a string of all product names in the cart, separated by commas.
+
 
