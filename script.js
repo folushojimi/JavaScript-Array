@@ -785,7 +785,7 @@ console.log(secondAttendee)
 {
     const [firstAttendee,  ,thirdAttendee] = confAttendee
     console.log(firstAttendee)
-    console.log(secondAttendee)
+    console.log(thirdAttendee)
 
 }
 
@@ -795,21 +795,76 @@ console.log(secondAttendee)
 // Given an array [100, 200, 300], use array destructuring to extract the first two 
 // elements into separate variables first and second.
 
+const extractFirst = [
+    100,
+    200,
+    300,
+]
+
+const [ex1, ex2] = extractFirst
+
+console.log(ex1)
+console.log(ex2)
+
+
+
 
 // 2. Skip Elements While Destructuring
 // Given an array [10, 20, 30, 40], use array destructuring to skip the first element and 
 // extract the second and fourth elements into second and fourth.
 
+const skip = [
+    10,
+    20,
+    30,
+    40,
+];
+const [ , s2,  , s4] = skip;
+console.log(s2);
+console.log(s4);
+
 // 3. Destructure with Default Values
 // Given an array [5], use array destructuring to extract the first value into a variable x and 
 // assign a default value of 10 to the second variable y if it doesn't exist.
+
+
+
+
 
 // 4. Destructure Nested Arrays
 // Given a nested array [1, [2, 3], 4], use array destructuring to extract the first element, the 
 // second element (which is an array), and the third element into separate variables a, b, and c.
 
+const nestedArray = [
+    1,
+    [2,3],
+    4
+];
+
+const [n1, n2, n3] = nestedArray;
+
+const a = n1;
+const b = n2;
+const c = n3;
+
+console.log(a,b,c)
+
 // 5. Swap Two Variables
 // Given two variables a = 50 and b = 100, use array destructuring to swap the values of a and b.
+{
+let a = 50;
+let b = 100;
+
+// creating a headless destructure
+
+[a , b] = [b, a];
+
+console.log(a);
+console.log(b);
+
+
+
+};
 
 
 // LIST OF DESTRUCTURING ADVANCE CHALLENGE QUESTIONS
